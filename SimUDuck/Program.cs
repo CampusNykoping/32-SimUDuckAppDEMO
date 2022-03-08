@@ -16,5 +16,12 @@ foreach (var duck in ducks)
     Console.WriteLine();
 }
 
+Duck model = new ModelDuck();
+model.Display();
+model.PerformQuack();
+model.PerformFly();
+
+model.FlyBehavior = new FlyRocketPowered();
+model.PerformFly();
 
 Console.ReadKey();

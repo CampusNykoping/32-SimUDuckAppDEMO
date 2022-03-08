@@ -4,8 +4,8 @@ public class RubberDuck : Duck
 {
     public RubberDuck()
     {
-        flyBehavior = new FlyNoWay();
-        quackBehavior = new Squeak();
+        FlyBehavior = new FlyNoWay();
+        QuackBehavior = new Squeak();
     }
     public override void Display()
     {

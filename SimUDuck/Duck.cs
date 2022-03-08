@@ -2,8 +2,8 @@
 
 public abstract class Duck      // Abstract because Display requires it
 {
-    internal IFlyBehavior? flyBehavior;
-    internal IQuackBehavior? quackBehavior;
+    private IFlyBehavior? flyBehavior;
+    private IQuackBehavior? quackBehavior;
 
     public void PerformQuack()
     {
@@ -22,6 +22,9 @@ public abstract class Duck      // Abstract because Display requires it
     {
         flyBehavior.Fly();
     }
+
+    public IFlyBehavior? FlyBehavior { set => flyBehavior = value; }
+    public IQuackBehavior? QuackBehavior { set => quackBehavior = value; }
 
     // OTHER duck-like methods here...
 

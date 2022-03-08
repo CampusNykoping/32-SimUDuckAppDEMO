@@ -4,8 +4,8 @@ public class MallardDuck : Duck
 {
     public MallardDuck()
     {
-        flyBehavior = new FlyWithWings();
-        quackBehavior = new Quack();
+        FlyBehavior = new FlyWithWings();
+        QuackBehavior = new Quack();
     }
     public override void Display()
     {
