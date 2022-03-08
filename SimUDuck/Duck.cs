@@ -1,8 +1,8 @@
 ﻿namespace SimUDuck;
 
-public class Duck
+public abstract class Duck      // Abstract because Display requires it
 {
-    public void Quack()
+    public virtual void Quack()
     {
         Console.WriteLine("Duck goes Quack");
     }
@@ -12,9 +12,12 @@ public class Duck
         Console.WriteLine("Duck swims");
     }
 
-    public virtual void Display()   // Make virtual so other classes can override
+    public abstract void Display();   // Make abstract so other classes MUST override
+    
+
+    public virtual void Fly()
     {
-        Console.WriteLine("I am a Duck");
+        Console.WriteLine("Duck flies");
     }
 
     // OTHER duck-like methods here...
