@@ -2,14 +2,10 @@
 
 public class DecoyDuck : Duck
 {
-    public override void Quack()
+    public DecoyDuck()
     {
-        // Do nothing
-    }
-
-    public override void Fly()
-    {
-        // Do nothing
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new MuteQuack();
     }
     public override void Display()
     {

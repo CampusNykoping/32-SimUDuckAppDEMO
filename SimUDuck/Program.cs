@@ -11,8 +11,8 @@ Duck[] ducks = new Duck[]
 foreach (var duck in ducks)
 {
     duck.Display();
-    duck.Quack();
-    duck.Fly();
+    duck.PerformQuack();
+    duck.PerformFly();
     Console.WriteLine();
 }
 

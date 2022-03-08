@@ -2,14 +2,10 @@
 
 public class RubberDuck : Duck
 {
-    public override void Quack()
+    public RubberDuck()
     {
-        Console.WriteLine("Rubber Duck goes Squeak");
-    }
-
-    public override void Fly()
-    {
-        // Do nothing
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new Squeak();
     }
     public override void Display()
     {

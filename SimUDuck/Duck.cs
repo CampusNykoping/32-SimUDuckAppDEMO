@@ -2,9 +2,12 @@
 
 public abstract class Duck      // Abstract because Display requires it
 {
-    public virtual void Quack()
+    internal IFlyBehavior? flyBehavior;
+    internal IQuackBehavior? quackBehavior;
+
+    public void PerformQuack()
     {
-        Console.WriteLine("Duck goes Quack");
+        quackBehavior.Quack();
     }
 
     public void Swim()
@@ -15,9 +18,9 @@ public abstract class Duck      // Abstract because Display requires it
     public abstract void Display();   // Make abstract so other classes MUST override
     
 
-    public virtual void Fly()
+    public void PerformFly()
     {
-        Console.WriteLine("Duck flies");
+        flyBehavior.Fly();
     }
 
     // OTHER duck-like methods here...
