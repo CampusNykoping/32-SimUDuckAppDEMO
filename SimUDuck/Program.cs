@@ -16,5 +16,8 @@ foreach (var duck in ducks)
     Console.WriteLine();
 }
 
+var mallard = new MallardDuck();
+mallard.Fly();
+mallard.Quack();
 
 Console.ReadKey();

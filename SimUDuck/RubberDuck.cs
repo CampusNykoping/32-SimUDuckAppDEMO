@@ -1,16 +1,12 @@
 ﻿namespace SimUDuck;
 
-public class RubberDuck : Duck
+public class RubberDuck : Duck, IQuackable
 {
-    public override void Quack()
+    public void Quack()
     {
         Console.WriteLine("Rubber Duck goes Squeak");
     }
-
-    public override void Fly()
-    {
-        // Do nothing
-    }
+    
     public override void Display()
     {
         Console.WriteLine("I am a Rubber Duck");
